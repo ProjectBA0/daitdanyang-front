@@ -1,33 +1,24 @@
-# Stage 1: Build the React Application
+# Stage 1: Build
 FROM node:18-alpine AS build
-
 WORKDIR /app
-
-# Copy package.json and package-lock.json
 COPY package*.json ./
-
-# Install dependencies (Use npm install for flexibility)
 RUN npm install
-
-# Copy source code
 COPY . .
-
-# Build the app
 RUN npm run build
 
-# Stage 2: Serve the App
+# Stage 2: Serve
 FROM node:18-alpine
+# Create non-root user
+RUN adduser -D -u 1000 user
+USER user
+ENV HOME=/home/user
+WORKDIR $HOME/app
 
-WORKDIR /app
-
-# Install 'serve' package globally to serve static files
+# Install 'serve' globally in user space
 RUN npm install -g serve
 
-# Copy build output from Stage 1
-COPY --from=build /app/build ./build
+# Copy build from Stage 1
+COPY --from=build --chown=user /app/build ./build
 
-# Expose port 7860 (Hugging Face default)
 EXPOSE 7860
-
-# Start the server on port 7860
 CMD ["serve", "-s", "build", "-l", "7860"]
