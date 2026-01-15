@@ -16,7 +16,48 @@ const FRAME_RATE = 100;
 const Chatbot = () => {
   const [currentFrame, setCurrentFrame] = useState(0);
   const [isOpen, setIsOpen] = useState(false);
+  const [isLoaded, setIsLoaded] = useState(false);
   
+  const canvasRef = useRef(null); // 🦁 캔버스 참조 추가
+  const imagesRef = useRef([]); // 🦁 이미지 객체들 보관용 Ref
+  
+  // 🦁 이미지 프리로딩 로직
+  useEffect(() => {
+    let loadedCount = 0;
+    const tempImages = [];
+    
+    for (let i = 0; i < FRAME_COUNT; i++) {
+      const img = new Image();
+      img.src = `${process.env.PUBLIC_URL}/images/cat_frames/frame_${String(i).padStart(3, '0')}.png`;
+      img.onload = () => {
+        loadedCount++;
+        if (loadedCount === FRAME_COUNT) {
+          setIsLoaded(true);
+        }
+      };
+      tempImages.push(img);
+    }
+    imagesRef.current = tempImages;
+  }, []);
+
+  // 🦁 캔버스에 이미지 그리기 (이 로직이 서버 요청을 0으로 만듭니다)
+  useEffect(() => {
+    if (isLoaded && canvasRef.current && imagesRef.current[currentFrame]) {
+      const canvas = canvasRef.current;
+      const ctx = canvas.getContext('2d');
+      const img = imagesRef.current[currentFrame];
+      
+      // 캔버스 크기를 이미지 크기에 맞춤 (또는 고정)
+      if (canvas.width !== img.width) {
+        canvas.width = img.width;
+        canvas.height = img.height;
+      }
+      
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      ctx.drawImage(img, 0, 0);
+    }
+  }, [currentFrame, isLoaded]);
+
   // 🦁 Resizable State
   const [size, setSize] = useState({ width: 420, height: 650 });
   const isResizing = useRef(false);
@@ -73,11 +114,13 @@ const Chatbot = () => {
 
   // 고양이 애니메이션
   useEffect(() => {
+    if (!isLoaded) return; // 🦁 프리로딩 전에는 애니메이션 시작 안 함
+
     const interval = setInterval(() => {
       setCurrentFrame(prevFrame => (prevFrame + 1) % FRAME_COUNT);
     }, FRAME_RATE);
     return () => clearInterval(interval);
-  }, []);
+  }, [isLoaded]);
 
   // 스크롤 자동 이동
   useEffect(() => {
@@ -355,7 +398,11 @@ const Chatbot = () => {
       )}
       
       <div className="cat-character" onClick={handleToggleChat}>
-        <img src={frameUrl} alt="Chatbot Cat" />
+        {/* 🦁 img 대신 canvas 사용 (서버 요청 발생 안 함) */}
+        <canvas 
+            ref={canvasRef} 
+            style={{ width: '100%', height: '100%', cursor: 'pointer' }}
+        />
         {!isOpen && <div className="chat-bubble">궁금한게 있냥?</div>}
       </div>
     </div>
