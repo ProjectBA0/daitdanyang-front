@@ -1,0 +1,98 @@
+.cartWrap {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 40px 0;
+}
+
+.cartTitle {
+  text-align: center;
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.cartHeader {
+  display: grid;
+  grid-template-columns:
+    50px 110px 1fr 120px 120px 120px 120px;
+  background-color: #e9f2fb;
+  padding: 12px 10px;
+  font-weight: 700;
+  font-size: 14px;
+  align-items: center;
+}
+
+.cartRow {
+  display: grid;
+  grid-template-columns:
+    50px 110px 1fr 120px 120px 120px 120px;
+  padding: 14px 10px;
+  border-bottom: 1px solid #eee;
+  align-items: center;
+  font-size: 14px;
+}
+
+.cartImg {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+}
+
+.cartName {
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.qtyBox {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.qtyBtn {
+  width: 22px;
+  height: 22px;
+  border: 1px solid #ccc;
+  background: white;
+  cursor: pointer;
+}
+
+.qtyNum {
+  width: 24px;
+  text-align: center;
+}
+
+.deleteBtn {
+  margin-top: 6px;
+  width: 90px;
+  height: 26px;
+  border: 1px solid #ccc;
+  background: white;
+  cursor: pointer;
+}
+
+.cartSummary {
+  margin-top: 30px;
+  background-color: #e9f2fb;
+  padding: 16px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  text-align: center;
+  font-weight: 700;
+}
+
+.cartButtons {
+  margin-top: 70px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.buyBtn {
+  width: 140px;
+  height: 42px;
+  border: 2px solid gray;
+  background: white;
+  font-weight: 700;
+  cursor: pointer;
+}

@@ -1,0 +1,108 @@
+/* Wishlist.module.css */
+
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.pageInner {
+  width: 1200px; /* CONTENT_W */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.bodyRow {
+  width: 1200px;
+  display: flex;
+  gap: 50px; /* INNER_GAP_X */
+  box-sizing: border-box;
+}
+
+/* 사이드바가 들어갈 빈 자리 */
+.sidebarSpacer {
+  width: 260px; /* SIDEBAR_W */
+  flex-shrink: 0;
+}
+
+/* 실제 찜 목록 내용 */
+.mainContent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  min-height: 800px;
+}
+
+.title {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.5rem;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 20px;
+}
+
+.toolbar {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.searchInList {
+  flex: 1;
+  height: 40px;
+  padding: 0 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.sortBtn {
+  width: 100px;
+  height: 40px;
+  cursor: pointer;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-weight: 600;
+}
+
+.sortBtn:hover {
+  background-color: #f9f9f9;
+}
+
+.listArea {
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.listItem {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  border: 1px solid #f0f0f0;
+  border-radius: 8px;
+  background-color: #fff;
+  transition: background-color 0.2s;
+}
+
+.listItem:hover {
+  background-color: #fafafa;
+}
+
+/* ==============================================================================
+   [Gemini 작업 로그] - 2025.12.26
+   1. 컴포넌트화: WishlistPage에서 본문 스타일만 분리.
+   2. 최적화: 사이드바 제거 및 컨테이너 스타일 단순화.
+   ============================================================================== */

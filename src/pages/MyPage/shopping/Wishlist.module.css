@@ -1,0 +1,99 @@
+.container {
+  width: 100%;
+  padding: 20px 0;
+}
+
+.title {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #556677; /* Soft Dark Blue */
+  margin-bottom: 30px;
+  border-bottom: 2px solid #D5E5F3;
+  padding-bottom: 15px;
+}
+
+/* Toolbar (Search & Sort) */
+.toolbar {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.searchInList {
+  flex: 1;
+  height: 50px;
+  padding: 0 25px;
+  font-size: 1rem;
+  border: 2px solid #D5E5F3;
+  border-radius: 50px; /* Fully Rounded */
+  color: #555;
+  background-color: #fcfdfe;
+  transition: border-color 0.2s;
+}
+
+.searchInList:focus {
+  outline: none;
+  border-color: #BBD2E6;
+}
+
+.sortBtn {
+  height: 50px;
+  padding: 0 25px;
+  border: none;
+  border-radius: 50px;
+  background: #BBD2E6; /* Theme Color */
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  box-shadow: 0 4px 10px rgba(187, 210, 230, 0.3);
+}
+
+.sortBtn:hover {
+  background-color: #a0c0da;
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 0 15px rgba(187, 210, 230, 0.6);
+}
+
+/* List Area */
+.listArea {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  /* border 제거 (카드형 리스트이므로 불필요) */
+}
+
+/* List Item (Card Style) */
+.listItem {
+  display: flex;
+  align-items: center;
+  padding: 20px 30px;
+  background-color: #FFFFFF;
+  border-radius: 16px;
+  border: 1px solid #E8EEF8;
+  box-shadow: 0 2px 5px rgba(187, 210, 230, 0.1);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+}
+
+.listItem:hover {
+  transform: translateY(-5px) scale(1.01);
+  box-shadow: 0 15px 30px rgba(187, 210, 230, 0.25);
+  border-color: #BBD2E6;
+  z-index: 2;
+}
+
+/* 텍스트 스타일 보정 (JSX에서 클래스 추가 필요할 수 있음) */
+.itemName {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.itemPrice {
+  color: #888;
+  font-size: 0.95rem;
+}
+

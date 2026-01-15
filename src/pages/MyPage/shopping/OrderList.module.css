@@ -1,0 +1,364 @@
+/* ===============================
+   기본 레이아웃
+=============================== */
+.wrap {
+  padding: 24px;
+  margin: 0;
+}
+
+.title {
+  margin-bottom: 16px;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+/* ===============================
+   상단 필터 영역 (정리본)
+=============================== */
+.filterBar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px;
+  border: 1px solid #e6e6e6;
+  background: #fafafa;
+  border-radius: 12px;
+}
+
+.filterLeft {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+}
+
+/* 상태 셀렉트 */
+.select {
+  height: 36px;
+  padding: 0 10px;
+  border: 1px solid #d8d8d8;
+  background: #fff;
+  border-radius: 10px;
+}
+
+/* 기간 버튼 */
+.quickBtns {
+  display: flex;
+  gap: 6px;
+}
+
+.quickBtn {
+  height: 36px;
+  padding: 0 12px;
+  border: 1px solid #d8d8d8;
+  background: #fff;
+  cursor: pointer;
+  line-height: 36px;
+  border-radius: 10px;
+}
+
+/* 날짜 영역 */
+.dateRange {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  margin-left: auto;
+}
+
+.dateInput {
+  height: 36px;
+  padding: 0 10px;
+  border: 1px solid #d8d8d8;
+  background: #fff;
+  border-radius: 10px;
+}
+
+.tilde {
+  color: #666;
+}
+
+/* 조회 버튼 */
+.searchBtn {
+  height: 36px;
+  padding: 0 14px;
+  border: none;
+  background: #BBD2E6;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+/* ===============================
+   안내 문구
+=============================== */
+.notice {
+  margin: 12px 0 18px;
+  padding-left: 18px;
+  color: #666;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* ===============================
+   주문 목록 테이블
+=============================== */
+.list {
+  border: 1px solid #e6e6e6;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.headerRow {
+  display: grid;
+  grid-template-columns: 150px 120px 1.6fr 70px 120px 160px 130px;
+  border-bottom: 1px solid #e6e6e6;
+  background: #f6f6f6;
+  font-weight: 700;
+  font-size: 13px;
+}
+
+.headerRow > div {
+  padding: 12px;
+  border-right: 1px solid #eee;
+}
+
+.headerRow > div:last-child {
+  border-right: none;
+}
+
+.empty {
+  padding: 30px;
+  text-align: center;
+  color: #777;
+}
+
+/* ===============================
+   주문 묶음
+=============================== */
+.orderGroup {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  border-bottom: 1px solid #eee;
+}
+
+.orderMeta {
+  padding: 14px 12px;
+  border-right: 1px solid #eee;
+  background: #fcfcfc;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.orderDate {
+  font-size: 13px;
+}
+
+.orderIdLink {
+  font-size: 13px;
+  color: #0b57d0;
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  text-decoration: underline;
+  word-break: break-all;
+}
+
+/* ===============================
+   상품 행
+=============================== */
+.orderItems {
+  display: flex;
+  flex-direction: column;
+}
+
+.itemRow {
+  display: grid;
+  grid-template-columns: 120px 1.6fr 70px 120px 160px 130px;
+  border-bottom: 1px solid #f0f0f0;
+  align-items: center;
+}
+
+.itemRow:last-child {
+  border-bottom: none;
+}
+
+.colImg,
+.colInfo,
+.colQty,
+.colPrice,
+.colStatus,
+.colAction {
+  padding: 14px 12px;
+  border-right: 1px solid #f3f3f3;
+}
+
+.itemRow > div:last-child {
+  border-right: none;
+}
+
+.colImg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.thumb {
+  width: 76px;
+  height: 96px;
+  object-fit: cover;
+  border: 1px solid #eee;
+  border-radius: 10px;
+}
+
+/* ===============================
+   상품 정보 텍스트
+=============================== */
+.itemName {
+  font-weight: 700;
+  margin-bottom: 6px;
+  line-height: 1.35;
+
+  /* 최대 2줄 말줄임 */
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.itemOption {
+  font-size: 12px;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+/* ===============================
+   수량 / 금액 / 상태
+=============================== */
+.colQty,
+.colPrice,
+.colStatus,
+.colAction {
+  text-align: center;
+}
+
+.statusText {
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.trackingLink {
+  display: inline-block;
+  font-size: 12px;
+  color: #0b57d0;
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  text-decoration: underline;
+  word-break: break-all;
+}
+
+/* ===============================
+   버튼
+=============================== */
+.grayBtn {
+  height: 32px;
+  padding: 0 10px;
+  border: 1px solid #d8d8d8;
+  background: #fff;
+  cursor: pointer;
+  font-size: 12px;
+  border-radius: 8px;
+}
+
+.darkBtn {
+  height: 32px;
+  padding: 0 10px;
+  border: none;
+  background: #BBD2E6;
+  color: #fff;
+  cursor: pointer;
+  font-size: 12px;
+  border-radius: 8px;
+}
+
+.dash {
+  color: #777;
+}
+
+.itemRow:hover {
+  background: #fcfcfc;
+}
+
+/* ===============================
+   반응형
+=============================== */
+@media (max-width: 1024px) {
+  .filterBar {
+    flex-wrap: wrap;
+  }
+
+  .dateRange {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 860px) {
+  .headerRow {
+    grid-template-columns: 130px 100px 1.6fr 60px 100px 140px 110px;
+    font-size: 12px;
+  }
+
+  .orderGroup {
+    grid-template-columns: 130px 1fr;
+  }
+
+  .itemRow {
+    grid-template-columns: 100px 1.6fr 60px 100px 140px 110px;
+  }
+
+  .thumb {
+    width: 68px;
+    height: 86px;
+  }
+}
+
+@media (max-width: 640px) {
+  .headerRow {
+    display: none;
+  }
+
+  .orderGroup {
+    grid-template-columns: 1fr;
+  }
+
+  .orderMeta {
+    border-right: none;
+    border-bottom: 1px solid #eee;
+  }
+
+  .itemRow {
+    grid-template-columns: 90px 1fr;
+    grid-template-areas:
+      "img info"
+      "qty price"
+      "status action";
+    gap: 10px;
+    padding: 12px;
+  }
+
+  .colImg { grid-area: img; }
+  .colInfo { grid-area: info; border-right: none; padding: 0; }
+  .colQty { grid-area: qty; border-right: none; padding: 0; text-align: left; }
+  .colPrice { grid-area: price; border-right: none; padding: 0; text-align: left; }
+  .colStatus { grid-area: status; border-right: none; padding: 0; text-align: left; }
+  .colAction { grid-area: action; border-right: none; padding: 0; text-align: left; }
+
+  .thumb {
+    width: 80px;
+    height: 100px;
+  }
+}

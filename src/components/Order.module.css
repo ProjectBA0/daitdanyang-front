@@ -1,0 +1,213 @@
+/* ===== 회색 배경 제거된 최종 Order.module.css ===== */
+
+.page {
+  background: #fff;
+  padding: 0;
+}
+
+.orderWrap {
+  width: 1200px;
+  margin: 0 auto;
+  background: #fff;
+  padding: 20px;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+.orderTitle {
+  width: 100%;
+  height: 80px;
+  border: 1px solid #999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+}
+
+.section {
+  margin-bottom: 20px;
+}
+
+.sectionHeader {
+  width: 120px;
+  height: 40px;
+  border: 1px solid #888;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: bold;
+  margin-bottom: 8px;
+  box-sizing: border-box;
+}
+
+.sectionBody {
+  width: 100%;
+  border: 1px solid #ccc;
+  padding: 16px;
+  box-sizing: border-box;
+}
+
+/* 폼 */
+.formRow {
+  display: flex;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+.label {
+  width: 80px;
+  font-size: 13px;
+}
+
+.inputBox {
+  flex: 1;
+  height: 32px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+.inputBoxSmall {
+  width: 120px;
+  height: 32px;
+  border: 1px solid #9bbce6;
+  background: #eef5ff;
+  box-sizing: border-box;
+}
+
+.messageBox {
+  margin-top: 10px;
+  height: 32px;
+  background: #eef5ff;
+  border: 1px solid #c0d7f2;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+  box-sizing: border-box;
+}
+
+/* 주문상품 */
+.productRow {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.productImage {
+  width: 90px;
+  height: 90px;
+  background: #eee;
+}
+
+.productInfo {
+  font-size: 13px;
+}
+
+/* ✅ 가격 */
+.priceRow {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+}
+
+.totalRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 44px;
+  padding: 0 12px;
+  margin-top: 14px;
+  background: #eef3fa;
+  font-weight: bold;
+  box-sizing: border-box;
+}
+
+/* ================= 결제수단 (정렬만 개선) ================= */
+
+.paymentMethods {
+  padding-left: 120px;
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 10px;
+
+  justify-content: center;   /* 🔥 전체 버튼 가운데 정렬 */
+  align-items: center;
+
+  font-size: 13px;
+  box-sizing: border-box;
+}
+
+
+.paymentMethods button {
+  min-width: 140px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;   /* 🔥 버튼 내부 가운데 */
+
+  gap: 8px;
+  height: 44px;
+  padding: 0 14px;
+
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+
+  font-size: 13px;
+  cursor: pointer;
+  white-space: nowrap;
+  box-sizing: border-box;
+
+  transition: all 0.2s ease;
+}
+
+
+.paymentMethods button img {
+  height: 20px;
+  width: auto;
+  display: block;
+}
+
+.paymentMethods button:hover {
+  border-color: #9bbce6;
+  background: #f3f8ff;
+}
+
+.paymentMethods button.active {
+  border-color: #3b82f6;
+  background: #eef5ff;
+  font-weight: bold;
+}
+
+/* 결제 버튼 */
+.payButton {
+  width: 100%;
+  height: 70px;
+  margin: 30px auto 0;
+  display: block;
+  background: #e6f0ff;
+  border: 1px solid #9bbce6;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+/* 🔥 주문상품 전용 배송비 */
+.productShipping {
+  height: 40px;
+  margin-top: 12px;
+  padding: 0 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #eef3fa;
+  border: none;
+  box-sizing: border-box;
+}

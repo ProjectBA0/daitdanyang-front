@@ -1,0 +1,201 @@
+/* Customer.module.css */
+
+/* --- 1. Top Info Bar --- */
+.topInfoBar {
+  width: 1200px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Theme Color: Light Blue Background */
+  background-color: #E8EEF8;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #556677;
+  margin-bottom: 40px;
+  border: 1px solid #D5E5F3;
+  box-shadow: 0 4px 10px rgba(187, 210, 230, 0.2);
+}
+
+/* --- 2. Category Tabs --- */
+.categoryTabs {
+  width: 1200px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.tabItem {
+  width: 180px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  border-radius: 30px; /* Pill shape tabs */
+  background-color: #FFFFFF;
+  color: #8fa0b0;
+  border: 1px solid #D5E5F3;
+  transition: all 0.2s ease;
+}
+
+.tabItem:hover {
+  background-color: #f4faff;
+  color: #556677;
+  transform: translateY(-2px);
+}
+
+.activeTab {
+  background-color: #BBD2E6; /* Active Color */
+  color: #FFFFFF;
+  border-color: #BBD2E6;
+  box-shadow: 0 4px 10px rgba(187, 210, 230, 0.4);
+}
+
+/* --- 3. Board Search Bar --- */
+.boardSearchBar {
+  width: 1200px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.searchInput {
+  width: 500px;
+  height: 50px;
+  padding: 0 25px;
+  font-size: 1rem;
+  border: 2px solid #D5E5F3;
+  border-radius: 50px; /* Fully rounded */
+  margin-right: 15px;
+  color: #555;
+  background-color: #fcfdfe;
+  transition: border-color 0.2s;
+}
+
+.searchInput:focus {
+  outline: none;
+  border-color: #BBD2E6;
+}
+
+.searchBtn {
+  height: 50px;
+  padding: 0 30px;
+  background-color: #BBD2E6;
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 1rem;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); /* Bouncy transition */
+  box-shadow: 0 4px 10px rgba(187, 210, 230, 0.3);
+}
+
+.searchBtn:hover {
+  background-color: #a0c0da;
+  transform: translateY(-2px) scale(1.05); /* 쫀득한 느낌 */
+  box-shadow: 0 0 20px rgba(187, 210, 230, 0.6); /* 글로우 효과 */
+}
+
+/* --- 4. Board List (Card Style) --- */
+.boardWrap {
+  width: 1200px;
+  min-height: 500px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 40px;
+}
+
+.boardHeader {
+  display: none; 
+}
+
+.boardBody {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Hide legacy table header if we use card layout */
+.boardTableHead {
+  display: none; 
+}
+
+.boardTableRows {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Modern Card Row with Micro-interaction */
+.boardRow {
+  display: flex;
+  align-items: center;
+  padding: 20px 30px;
+  background-color: #FFFFFF;
+  border-radius: 16px;
+  border: 1px solid #E8EEF8;
+  box-shadow: 0 2px 5px rgba(187, 210, 230, 0.1);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); /* Smooth spring-like */
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+}
+
+.boardRow:hover {
+  transform: translateY(-5px) scale(1.01); /* 살짝 커지며 올라감 */
+  box-shadow: 0 15px 30px rgba(187, 210, 230, 0.25); /* 깊은 그림자 */
+  border-color: #BBD2E6;
+  z-index: 2; /* 호버 시 다른 요소보다 위에 보이도록 */
+}
+
+/* Row Content Layout */
+.rowNo { width: 80px; font-weight: bold; color: #BBD2E6; }
+.rowCategory { width: 120px; font-weight: 600; color: #556677; background: #E8EEF8; padding: 5px 10px; border-radius: 8px; text-align: center; font-size: 0.9rem; margin-right: 20px; }
+.rowTitle { flex: 1; font-size: 1.1rem; color: #333; font-weight: 500; }
+.rowDate { width: 120px; text-align: right; color: #99aabb; font-size: 0.9rem; }
+
+/* Pagination */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 40px;
+}
+
+.pageBtn {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #D5E5F3;
+  background-color: #fff;
+  cursor: pointer;
+  border-radius: 8px;
+  color: #777;
+  transition: all 0.2s;
+}
+
+.pageBtn:hover {
+  background-color: #E8EEF8;
+  color: #556677;
+}
+
+.activePageBtn {
+  background-color: #BBD2E6;
+  color: #fff;
+  border-color: #BBD2E6;
+  font-weight: bold;
+}
+

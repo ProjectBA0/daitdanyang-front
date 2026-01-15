@@ -1,0 +1,114 @@
+/* EditPost.module.css */
+
+.page {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding: 80px 0;
+  background-color: #fcfdfe;
+}
+
+.container {
+  width: 1000px;
+  padding: 60px;
+  background: #ffffff;
+  border-radius: 24px;
+  box-shadow: 0 15px 40px rgba(187, 210, 230, 0.25);
+  border: 1px solid #E8EEF8;
+}
+
+.title {
+  text-align: left;
+  margin-bottom: 40px;
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #334455;
+  letter-spacing: -0.5px;
+  border-bottom: 2px solid #F4F8FB;
+  padding-bottom: 20px;
+}
+
+/* 입력 필드 */
+.field {
+  margin-bottom: 30px;
+}
+
+.field label {
+  display: block;
+  margin-bottom: 12px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #556677;
+}
+
+.field input,
+.field textarea {
+  width: 100%;
+  padding: 15px 20px;
+  border-radius: 12px;
+  border: 2px solid #E8EEF8;
+  font-size: 1rem;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+  background-color: #fcfdfe;
+}
+
+/* 포커스 효과 (은은한 테마색) */
+.field input:focus,
+.field textarea:focus {
+  outline: none;
+  border-color: #BBD2E6;
+  background-color: #fff;
+  box-shadow: 0 0 0 4px rgba(187, 210, 230, 0.2);
+}
+
+.field textarea {
+  resize: vertical;
+  min-height: 300px;
+  line-height: 1.6;
+}
+
+/* 버튼 영역 */
+.buttonArea {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 50px;
+}
+
+.buttonArea button {
+  min-width: 140px;
+  height: 55px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  font-size: 1.05rem;
+  font-weight: 700;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+/* 저장 버튼 (테마 회청색) */
+.saveBtn {
+  background-color: #556677;
+  color: #fff;
+  box-shadow: 0 4px 10px rgba(85, 102, 119, 0.2);
+}
+
+.saveBtn:hover {
+  background-color: #445566;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(85, 102, 119, 0.3);
+}
+
+/* 취소 버튼 (테마 연하늘색) */
+.cancelBtn {
+  background-color: #E8EEF8;
+  color: #556677;
+  border: 1px solid #D5E5F3;
+}
+
+.cancelBtn:hover {
+  background-color: #D5E5F3;
+  transform: translateY(-2px);
+}

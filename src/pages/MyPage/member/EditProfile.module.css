@@ -1,0 +1,26 @@
+.wrap { padding: 24px; }
+
+.title { font-size: 22px; font-weight: 700; margin-bottom: 18px; }
+
+.form { display: flex; flex-direction: column; gap: 18px; }
+
+.section { border: 1px solid #eee; border-radius: 12px; padding: 18px; background: #fff; }
+
+.sectionTitle { font-size: 16px; font-weight: 800; margin-bottom: 12px; }
+
+.row { display: grid; grid-template-columns: 120px 1fr; align-items: center; gap: 12px; padding: 10px 0; }
+
+.label { font-size: 14px; font-weight: 700; color: #333; }
+
+.input { height: 44px; padding: 0 12px; border: 1px solid #ddd; border-radius: 10px; outline: none; font-size: 14px; }
+
+.input:disabled { background: #f7f7f7; color: #888; }
+
+.actions { display: flex; gap: 10px; justify-content: flex-end; margin-bottom: 15px;}
+
+.cancelBtn { height: 44px; padding: 0 16px; border-radius: 10px; border: 1px solid #ddd; background: #fff; cursor: pointer; font-weight: 800; }
+
+.subBtn{height: 44px; padding: 0 16px; border-radius: 10px; border: 1px solid #ddd; background: #fff; cursor: pointer; font-weight: 700;
+}
+
+.saveBtn { height: 44px; padding: 0 16px; border-radius: 10px; border: none; background: #111; color: #fff; cursor: pointer; font-weight: 800; }

@@ -1,0 +1,101 @@
+/* src/pages/FindAccount.module.css */
+.wrap {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding-top: 70px;
+}
+
+.card {
+  width: 560px;
+}
+
+.title {
+  text-align: center;
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 24px;
+}
+
+.tab {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* 포커스(클릭)했을 때 밑줄 강조 */
+.field input:focus,
+.field select:focus{
+  border-bottom-color: #111;
+}
+
+.label {
+  font-size: 12px;
+  color: #777;
+}
+
+.inputLine,
+.selectLine {
+  border: none;
+  border-bottom: 1px solid #ddd;
+  height: 42px;
+  padding: 0 6px;
+  outline: none;
+}
+
+.phoneRow {
+  display: grid;
+  grid-template-columns: 90px 1fr 1fr;
+  gap: 18px;
+}
+
+.btn {
+  margin-top: 8px;
+  height: 48px;
+  border: none;
+  background: #9bbad1;
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.subBtn {
+  margin-top: 10px;
+  height: 42px;
+  border: 1px solid #ddd;
+  background: #fff;
+  cursor: pointer;
+}
+
+.result {
+  margin-top: 18px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.errorText {
+  margin-top: 6px;
+  font-size: 8px;
+  color: #e53935;
+}

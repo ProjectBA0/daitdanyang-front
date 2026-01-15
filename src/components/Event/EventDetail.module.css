@@ -1,0 +1,111 @@
+/* front/src/components/Event/EventDetail.module.css */
+.container {
+    width: 1000px;
+    margin: 0 auto;
+    padding: 80px 0;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+.loading {
+    text-align: center;
+    padding: 100px;
+    font-size: 1.5rem;
+    color: #888;
+}
+
+.header {
+    border-bottom: 2px solid #333;
+    padding-bottom: 20px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #222;
+    margin-bottom: 10px;
+}
+
+.date {
+    font-size: 1.1rem;
+    color: #666;
+}
+
+.contentWrapper {
+    background-color: #fff;
+    /* padding: 40px; */
+    border-radius: 20px;
+    /* box-shadow: 0 5px 20px rgba(0,0,0,0.05); */
+    min-height: 500px;
+}
+
+.bannerArea {
+    width: 100%;
+    margin-bottom: 50px;
+    /* text-align: center; 제거 (block이므로 필요 없음) */
+    overflow: hidden; /* 둥근 모서리 유지 */
+    border-radius: 16px;
+}
+
+.banner {
+    width: 100%;
+    height: auto;
+    display: block; /* 🦁 Force Block */
+    object-fit: cover; /* 🦁 Fill Area */
+    /* border-radius: 16px; (부모에게 위임) */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.bodyContent {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #444;
+    padding: 0 20px;
+}
+
+.bodyContent h3 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 15px;
+    margin-top: 30px;
+}
+
+.bodyContent h4 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #555;
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+
+.bodyContent ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+.bodyContent li {
+    margin-bottom: 5px;
+}
+
+.footer {
+    margin-top: 60px;
+    text-align: center;
+}
+
+.listBtn {
+    padding: 15px 40px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.listBtn:hover {
+    background-color: #555;
+}

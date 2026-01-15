@@ -1,0 +1,68 @@
+/* EventGrid.module.css */
+
+.gridSection {
+  width: 1200px;
+  min-height: 1420px; 
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  padding-bottom: 50px;
+}
+
+.grid {
+  width: 1200px;
+  display: grid;
+  grid-template-columns: 570px 570px;
+  column-gap: 60px;
+  row-gap: 60px;
+  align-content: start;
+  box-sizing: border-box;
+}
+
+/* Event Card Design (Refined for Images) */
+.card {
+  width: 570px;
+  height: 350px; /* 높이 약간 조절 */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch; /* 자식 요소들을 가로로 꽉 채움 */
+  box-sizing: border-box;
+  padding: 0; /* 🦁 패딩 제거 (이미지 꽉 차게) */
+  
+  background: #FFFFFF;
+  border-radius: 24px;
+  box-shadow: 0 10px 30px rgba(187, 210, 230, 0.2); 
+  border: 1px solid #D5E5F3; 
+  
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(187, 210, 230, 0.4);
+  border-color: #BBD2E6; 
+}
+
+.cardTitle {
+  font-size: 1.4rem; /* 🦁 폰트 크기 최적화 */
+  font-weight: 800;
+  color: #556677;
+  margin-bottom: 5px;
+  z-index: 2;
+  letter-spacing: -0.5px;
+}
+
+.cardDate {
+  font-size: 0.9rem;
+  color: #8fa0b0;
+  font-weight: 500;
+  z-index: 2;
+}
+
+.cardBg {
+  display: none; /* 🦁 이미지가 있으므로 배경 그라데이션 제거 */
+}

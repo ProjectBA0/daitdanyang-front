@@ -1,0 +1,118 @@
+/* Category.module.css */
+.category * {
+    margin: 0 auto;
+}
+
+.sub {
+    width: 1200px;
+    height: 120px;
+}
+
+.sub button {
+    width: 90px;
+    height: 100px;
+    background-color: white;
+    border: none;
+}
+
+.sub_ctgr {
+    border: none;
+    background: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.sub_ctgr p {
+    margin-top: 8px;
+    font-size: 12px;
+}
+
+.icon {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+
+.sortbtn {
+    width: 1200px;
+    height: 40px;
+    line-height: 35px;
+    text-align: right;
+    background-color: #d5e5f3;
+}
+
+.sortbtn button {
+    margin-right: 8px;
+    border: none;
+    background-color: #d5e5f3;
+}
+
+.active {
+    color: #000;
+    font-weight: 600;
+}
+
+.inactive {
+    color: #aaa;
+}
+
+
+.container {
+    width: 1200px;
+}
+
+.col {
+    width: 25%;
+    height: 280px;
+    margin: 0 0 8px;
+}
+
+.col img {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    margin: 15px 0 12px;
+}
+
+.title {
+    /* line-height가 없으면 OS, 브라우저, 폰트에 따라 계산 결과가 달라짐 */
+    line-height: 1.4;
+    /* 영역 높이가 항상 1줄로 고정, 높이가 다 달라지는 걸 막아줌 (높이 통일) */
+    height: calc(1.4em * 1);
+    /* 줄 수 제한을 쓰기 위한 필수 설정 */
+    display: -webkit-box;
+    /* 보여줄 최대 줄 수 (텍스트 표시 규칙) */
+    -webkit-line-clamp: 1;
+    /* line-clamp을 작동하게 만드는 스위치 */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* 가격은 항상 아래로 */
+.col p {
+    margin-top: auto;
+    margin-bottom: 0;
+}
+
+/* module.css는 class 이름을 바꿔버리기 때문에 global 꼭 필요 ! */
+.category_pagination :global(.page-link) {
+    border: none;
+    color: #000;
+    outline: 3px none #fff;
+}
+
+.category_pagination :global(.page-item.active .page-link) {
+    background-color: #f2f2f2;
+    font-weight: 600;
+}
+
+.category_pagination :global(.page-link:hover) {
+    background-color: #f2f2f2;
+    color: #000;
+}
+
+.category_pagination :global(.page-item.disabled) {
+    display: none;
+}

@@ -1,0 +1,50 @@
+.page {
+  /* background 제거 */
+}
+
+/* 공통 1200px 컨테이너 */
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* ===== EVENT TITLE ===== */
+.eventTitle {
+  margin: 40px 0 20px;
+  height: 80px;
+  border: 2px solid #666;
+  /* background 제거 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+/* ===== EVENT GRID ===== */
+.eventGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 60px;
+  margin-bottom: 70px;
+}
+
+.eventCard {
+  height: 310px;
+  /* background 제거 */
+  border: 2px solid #ff5cb8;
+  border-radius: 6px;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+  /* background 제거 */
+  padding: 40px 0;
+  font-size: 12px;
+}
+
+.footerInner {
+  display: flex;
+  justify-content: space-between;
+}

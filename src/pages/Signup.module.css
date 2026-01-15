@@ -1,0 +1,345 @@
+/* =========================
+   Base
+========================= */
+.signupWrap,
+.signupWrap * {
+  box-sizing: border-box;
+}
+
+.signupWrap {
+  min-height: 100vh;
+  background: #f3f6fb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.signupCard {
+  width: min(760px, 100%);
+  margin: 0 auto;
+  background: #fff;
+  border: 1px solid #d7e0ef;
+  padding: 30px 28px;
+  border-radius: 18px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+}
+
+.signupHeader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 18px;
+  font-weight: 800;
+  color: #3b5fcc;
+}
+
+.brandImage {
+  width: 260px;
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.required {
+  color: #e53935;
+  margin-left: 6px;
+}
+
+.section {
+  margin-top: 18px;
+}
+
+/* =========================
+   Section Title (예쁜 배치 핵심)
+   - 중앙 알약 대신 왼쪽 헤더 느낌
+========================= */
+.sectionTitle {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #1f2a44;
+  font-weight: 900;
+  font-size: 16px;
+  margin-bottom: 12px;
+}
+
+.sectionTitle::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: #e6edf8;
+}
+
+/* 관심/내펫등록 박스 */
+.sectionBox {
+  border: 1px solid #e6edf8;
+  background: #fbfcff;
+  border-radius: 14px;
+  padding: 14px;
+}
+
+/* =========================
+   Rows / Fields
+========================= */
+.fieldRow {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  column-gap: 24px;
+  align-items: start;
+  margin: 16px 0;
+}
+
+.fieldRow > label {
+  text-align: left;
+  justify-self: start;
+  padding-top: 10px;
+  color: #555;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+/* ✅ 오른쪽 칸이 가운데 떠버리는 현상 방지 */
+.fieldRow > div {
+  justify-self: start;
+  width: 100%;
+}
+
+/* input / select 공통 */
+.fieldRow input,
+.fieldRow select {
+  width: 100%;
+  border: none;
+  border-bottom: 1.5px solid #d0d7e6;
+  border-radius: 0;
+  padding: 10px 6px;
+  outline: none;
+  background: transparent;
+  font-size: 14px;
+  transition: border-color 0.2s;
+}
+
+.fieldRow input::placeholder {
+  color: #aaa;
+}
+
+.fieldRow input:focus,
+.fieldRow select:focus {
+  border-bottom-color: #3b5fcc;
+}
+
+/* 구분선 */
+.divider {
+  margin: 18px 0;
+  border: none;
+  border-top: 1px solid #eef2fb;
+}
+
+/* =========================
+   Inline input + button (중복확인)
+========================= */
+.inlineRow {
+  display: grid;
+  grid-template-columns: 1fr 110px;
+  gap: 10px;
+  align-items: center;
+}
+
+.idArea {
+  display: flex;
+  flex-direction: column;
+}
+
+/* inline 버튼 */
+.btnInline {
+  height: 40px;
+  border: 1.5px solid #3b5fcc;
+  background: #fff !important;
+  color: #3b5fcc;
+  border-radius: 10px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btnInline:hover {
+  background: #3b5fcc !important;
+  color: #fff;
+}
+
+/* =========================
+   Help Text
+========================= */
+.helpText {
+  font-size: 13px;
+  margin-top: 6px;
+  text-align: left;
+  line-height: 1.35;
+}
+
+.ok {
+  color: #2e7d32;
+}
+
+.bad {
+  color: #d32f2f;
+}
+
+/* =========================
+   Checkbox Row (관심동물/토글)
+========================= */
+.checkRow {
+  display: flex;
+  gap: 22px;
+  align-items: center;      /* 세로 기준 통일 */
+}
+
+.checkItem {
+  display: inline-flex;     /* 텍스트/체크박스 한 덩어리 */
+  align-items: center;      /* 세로 중앙 정렬 */
+  gap: 10px;
+  min-height: 32px;         /* ✅ 기준 높이 통일 */
+  font-size: 14px;
+  font-weight: 700;
+  color: #2a3553;
+  line-height: 32px;        /* ✅ 텍스트 높이를 체크박스에 맞춤 */
+  margin-top: 5px;
+}
+
+
+.checkItem input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  margin: 0;                /* 기본 margin 제거 */
+  accent-color: #3b5fcc;
+}
+
+
+
+
+.toggleRow {
+  display: flex;
+  align-items: center;
+}
+
+/* =========================
+   Pets
+========================= */
+.petTopBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.petHint {
+  font-size: 13px;
+  color: #6b7a99;
+}
+
+/* + / - icon button */
+.iconBtn {
+  width: 38px;
+  height: 38px;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  font-size: 20px;
+  line-height: 1;
+}
+
+.petCard {
+  border: 1px solid #e2e9f7;
+  background: #ffffff;
+  padding: 14px;
+  border-radius: 14px;
+  margin-top: 12px;
+}
+
+.petCardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  color: #2f4fb8;
+}
+
+.petCardHeader strong {
+  font-size: 14px;
+  font-weight: 900;
+}
+
+/* 펫 카드 안은 더 컴팩트하게 */
+.petCard .fieldRow {
+  grid-template-columns: 110px 1fr;
+  column-gap: 16px;
+  margin: 12px 0;
+}
+
+/* =========================
+   Submit
+========================= */
+.submitRow {
+  display: flex;
+  justify-content: center;
+  margin-top: 26px;
+}
+
+.btnSignup {
+  min-width: 220px;
+  height: 52px;
+  border: none;
+  background: #3b5fcc !important;
+  color: #fff;
+  border-radius: 14px;
+  font-weight: 900;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.05s;
+}
+
+.btnSignup:hover {
+  background: #2f4fb8 !important;
+}
+
+.btnSignup:active {
+  transform: translateY(1px);
+}
+
+/* =========================
+   Responsive
+========================= */
+@media (max-width: 640px) {
+  .signupCard {
+    padding: 22px 18px;
+    border-radius: 16px;
+  }
+
+.rowCenter {
+  align-items: center !important;   /* fieldRow의 align-items를 덮어씀 */
+}
+
+.rowCenter > label {
+  padding-top: 0 !important;        /* 기존 fieldRow > label의 padding-top 제거 */
+  margin: 0 !important;
+  line-height: 32px !important;     /* checkItem의 기준 높이와 맞춤 */
+  display: flex !important;
+  align-items: center !important;
+  height: 32px !important;          /* 라벨 높이 고정 */
+}
+
+  .inlineRow {
+    grid-template-columns: 1fr;
+  }
+
+  .petCard .fieldRow {
+    grid-template-columns: 1fr;
+  }
+
+  .btnSignup {
+    width: 100%;
+    min-width: 0;
+  }
+}

@@ -1,0 +1,140 @@
+/* ===== footer 전체 ===== */
+.footer {
+  width: 100%;
+  background-color: #E8EEF8;
+  margin-top: 80px;
+  padding: 50px 0;
+  color: #222;
+  border-top: 2px solid #BBD2E6;
+}
+
+/* ===== 내부 박스 ===== */
+.footerInner {
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #D5E5F3;
+  border-radius: 24px;
+  padding: 40px 48px;
+
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 40px;
+
+  box-shadow: 0 18px 36px rgba(0, 0, 0, 0.06);
+
+  /* 🔥 전체 기본은 좌측정렬 */
+  text-align: left;
+}
+
+/* ===== 왼쪽 ===== */
+.left {
+  font-size: 14px;
+  line-height: 1.75;
+}
+
+.company {
+  font-size: 16px;
+  font-weight: 800;
+  margin-bottom: 16px;
+}
+
+/*
+  🔥 핵심: 라벨/값 간격 자동 정돈
+  - 라벨은 내용만큼(max-content) + 너무 길면 clamp로 제한
+  - 값은 남은 공간(1fr)
+  → "번호 :     010..." 같은 과한 벌어짐이 사라짐
+*/
+.infoRow {
+  display: grid;
+  grid-template-columns: minmax(110px, 16ch) 1fr; /* 라벨칸 살짝 넓힘 */
+  gap: 12px;
+  margin-bottom: 8px;
+  align-items: start;
+}
+
+/* 기존 .label 수정 */
+.label {
+  font-weight: 700;
+  white-space: normal;     /* ✅ 줄바꿈 허용 (겹침 방지) */
+  line-height: 1.4;
+}
+
+/* 값은 안전하게 줄바꿈 */
+.value {
+  color: #222;
+  word-break: keep-all;
+  overflow-wrap: anywhere;
+}
+
+.copy {
+  margin-top: 18px;
+  font-size: 12px;
+  color: #555;
+}
+
+/* ===== 가운데 ===== */
+.center {
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.centerTitle {
+  font-size: 16px;
+  font-weight: 800;
+  margin-bottom: 14px;
+}
+
+.line {
+  margin-bottom: 4px;
+}
+
+.email {
+  margin-top: 10px;
+  font-weight: 700;
+}
+
+/* ===== 오른쪽 (대표전화 상단 정렬) ===== */
+.right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;   /* 🔥 왼쪽 정렬 */
+  justify-content: flex-start; /* 🔥 위쪽 정렬 */
+  padding-top: 2px;          /* 살짝 내려서 균형 */
+}
+
+.phoneTitle {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 18px;
+  font-weight: 900;
+  margin-bottom: 10px;
+}
+
+.phoneTitle img {
+  width: 26px;
+  height: 26px;
+}
+
+.phone {
+  font-size: 30px;
+  font-weight: 900;
+  letter-spacing: 0.5px;
+}
+
+/* ===== 반응형 ===== */
+@media (max-width: 900px) {
+  .footerInner {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    padding: 30px 20px;
+  }
+
+  .infoRow {
+    grid-template-columns: minmax(88px, 11ch) 1fr;
+  }
+
+  .phone {
+    font-size: 26px;
+  }
+}
